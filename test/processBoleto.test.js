@@ -55,6 +55,8 @@ describe('Processador de boleto', () => {
       
 
     const qtd = sistema.QuantidadeBoleto(boleto) 
+    
+    const valores = sistema.Map(boleto)  
   
     
  test(' quantidade de boletos', () => {
@@ -62,6 +64,13 @@ describe('Processador de boleto', () => {
 
 
 })
+test(' Valores dos Boletos', () => {
+
+  expect(valores).toStrictEqual([1300.00, 100.00, 100.00, 1200.00])
+
+ })
+
+
 
 
     })
