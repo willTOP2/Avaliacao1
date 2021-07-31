@@ -42,7 +42,8 @@ describe('Processador de boleto', () => {
 
     ]
 
-    const pagamento =  {
+    const pagamento =  
+    {
 
    
       valorPago: 1300.00,
