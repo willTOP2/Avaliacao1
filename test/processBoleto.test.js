@@ -52,11 +52,12 @@ describe('Processador de boleto', () => {
      
   
       }
-      
+      const verificacao = sistema.verificar(fatura, pagamento) 
     const somaBoleto = sistema.SomaBoletos(boleto) 
     const qtd = sistema.QuantidadeBoleto(boleto) 
-    const faturaTotal = sistema.processa(fatura, valores, qtd, verificacao)
     const valores = sistema.Map(boleto)  
+    const faturaTotal = sistema.processa(fatura, valores, qtd, verificacao)
+ 
   
     
  test(' quantidade de boletos', () => {
