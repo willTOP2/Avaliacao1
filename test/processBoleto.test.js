@@ -77,6 +77,13 @@ test(' Valores dos Boletos', () => {
 
 })
 
+test(' Soma dos Boletos', () => {
+  expect(somaBoleto).toBe(2700.00)
+
+
+})
+
+
 
 
 
