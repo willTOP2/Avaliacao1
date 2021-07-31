@@ -53,7 +53,7 @@ describe('Processador de boleto', () => {
   
       }
       
-
+    const somaBoleto = sistema.SomaBoletos(boleto) 
     const qtd = sistema.QuantidadeBoleto(boleto) 
     
     const valores = sistema.Map(boleto)  
