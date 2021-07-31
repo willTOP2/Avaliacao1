@@ -55,7 +55,7 @@ describe('Processador de boleto', () => {
       
     const somaBoleto = sistema.SomaBoletos(boleto) 
     const qtd = sistema.QuantidadeBoleto(boleto) 
-    
+    const faturaTotal = sistema.processa(fatura, valores, qtd, verificacao)
     const valores = sistema.Map(boleto)  
   
     
@@ -69,6 +69,12 @@ test(' Valores dos Boletos', () => {
   expect(valores).toStrictEqual([1300.00, 100.00, 100.00, 1200.00])
 
  })
+
+ test(' Fatura nao paga', () => {
+  expect(verificacao).toBe('fatura nao marcada como paga')
+
+
+})
 
 
 
