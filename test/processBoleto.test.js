@@ -1,4 +1,8 @@
+const Sistema = require('../lib/Process')
+const {toBeDeepCloseTo} = require('jest-matcher-deep-close-to')
+expect.extend( { toBeDeepCloseTo})
 
+const sistema  = new Sistema()
 
 
 describe('Processador de boleto', () => {
@@ -52,6 +56,11 @@ describe('Processador de boleto', () => {
     const qtd = sistema.QuantidadeBoleto(boleto) 
   
     
+ test(' quantidade de boletos', () => {
+  expect(qtd).toBe(4) 
+
+
+})
 
 
     })
